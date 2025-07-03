@@ -49,25 +49,58 @@
     <a href="careers.html">Careers</a>
     <a href="contact.html">Contact</a>
   </nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#products">Products</a>
-    <a href="team.html">Team</a>
-    <a href="careers.html">Careers</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Vayuclean Technologies Pvt. Ltd is a trusted manufacturer of cleanroom and biosafety equipment. With a strong commitment to innovation and quality, we serve the pharmaceutical, research, and healthcare industries globally.</p>
-    <a href="#" class="cta-button">Download Company Brochure</a>
+<section id="products">
+    <h2>Our Products</h2>
+    <input type="text" id="searchInput" placeholder="Search products..." style="width: 100%; padding: 10px; margin-bottom: 20px;" />
+    <div class="products"><a href="biosafety-cabinet.html" style="text-decoration: none; color: inherit;">
+      <div class="product">
+        <h3>Biosafety Cabinet</h3>
+        <p>Designed to provide personnel, product, and environmental protection.</p>
+      </div>
+    </a>
+<a href="dynamic-pass-box.html" style="text-decoration: none; color: inherit;">
+      <div class="product">
+        <h3>Dynamic Pass Box</h3>
+        <p>Used to transfer material between cleanrooms with air filtration system.</p>
+      </div>
+    </a>
+<a href="static-pass-box.html" style="text-decoration: none; color: inherit;">
+      <div class="product">
+        <h3>Static Pass Box</h3>
+        <p>Enables safe transfer of materials between areas of equal cleanliness.</p>
+      </div>
+    </a>
+<a href="laminar-air-flow.html" style="text-decoration: none; color: inherit;">
+      <div class="product">
+        <h3>Laminar Air Flow</h3>
+        <p>Provides an aseptic work environment through unidirectional airflow.</p>
+      </div>
+    </a>
+<a href="air-shower.html" style="text-decoration: none; color: inherit;">
+      <div class="product">
+        <h3>Air Shower</h3>
+        <p>Removes dust particles from personnel before entering cleanroom.</p>
+      </div>
+    </a>
+<a href="garment-storage-cabinet.html" style="text-decoration: none; color: inherit;">
+      <div class="product">
+        <h3>Clean Room Garment Storage Cabinet</h3>
+        <p>Maintains cleanliness of garments used in cleanrooms.</p>
+      </div>
+    </a></div>
   </section>
-
-  
-
-  
-
-  <footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.getElementById("searchInput");
+      input.addEventListener("input", () => {
+        const value = input.value.toLowerCase();
+        document.querySelectorAll(".product").forEach(el => {
+          const match = el.textContent.toLowerCase().includes(value);
+          el.style.display = match ? "block" : "none";
+        });
+      });
+    });
+  </script>
+<footer>
     <p>&copy; 2025 Vayuclean Technologies Pvt. Ltd | All Rights Reserved</p>
   </footer>
-</body>
-</html>
