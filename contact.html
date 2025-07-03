@@ -51,12 +51,31 @@
   </nav>
   <section>
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/xnqeqzaz" method="POST">
-      <label>Name: <input type="text" name="name" required /></label><br /><br />
-      <label>Email: <input type="email" name="email" required /></label><br /><br />
-      <label>Message:<br /><textarea name="message" rows="5" required></textarea></label><br /><br />
-      <button type="submit">Send Message</button>
-    </form>
+    
+<form action="https://formspree.io/f/xnqeqzaz" method="POST" style="max-width: 600px; margin: 0 auto; background: #f4f4f4; padding: 20px; border-radius: 8px;">
+  <input type="hidden" name="_redirect" value="https://www.vayucleantechnologies.com/thank-you.html" />
+  <input type="hidden" name="_autoresponse" value="Thank you for contacting Vayuclean Technologies. We have received your message and will respond as soon as possible." />
+  <div style="margin-bottom: 15px;">
+    <label for="name" style="display: block; margin-bottom: 5px;">Name</label>
+    <input type="text" name="name" id="name" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;" />
+  </div>
+  <div style="margin-bottom: 15px;">
+    <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
+    <input type="email" name="email" id="email" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;" />
+  </div>
+  <div style="margin-bottom: 15px;">
+    <label for="subject" style="display: block; margin-bottom: 5px;">Subject</label>
+    <input type="text" name="subject" id="subject" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;" />
+  </div>
+  <div style="margin-bottom: 15px;">
+    <label for="message" style="display: block; margin-bottom: 5px;">Message</label>
+    <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+  </div>
+  <div>
+    <button type="submit" style="background-color: #0055a5; color: white; padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+  </div>
+</form>
+
     <p>Email: <a href="mailto:info@vayucleantechnologies.com">info@vayucleantechnologies.com</a></p>
     <p>Address: Unit No 22, Phase-1 Parmar Techno Centre, Nr-Western Express Highway, Vasai (East), Maharashtra - 401208, India</p>
   </section>
