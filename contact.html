@@ -30,12 +30,27 @@
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const form = document.querySelector("form");
+
+    if (urlParams.get("submitted") === "true") {
+      document.getElementById("confirmationMessage").style.display = "block";
+      form.reset(); // Clear form fields
+      // Clean URL without reloading
+      if (window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
+
+    form.addEventListener("submit", function () {
+      form.action += "?submitted=true";
+    });
+  });
+</script>
+
 </head>
 <body>
   <header>
@@ -52,8 +67,32 @@
   <section>
     <h2>Contact Us</h2>
     
+<div id="confirmationMessage" style="display: none; max-width: 600px; margin: 20px auto; padding: 15px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; text-align: center;">
+  ✅ Thank you! Your message has been sent successfully.
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const form = document.querySelector("form");
+
+    if (urlParams.get("submitted") === "true") {
+      document.getElementById("confirmationMessage").style.display = "block";
+      form.reset(); // Clear form fields
+      // Clean URL without reloading
+      if (window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
+
+    form.addEventListener("submit", function () {
+      form.action += "?submitted=true";
+    });
+  });
+</script>
+
+
 <form action="https://formspree.io/f/xnqeqzaz" method="POST" style="max-width: 600px; margin: 0 auto; background: #f4f4f4; padding: 20px; border-radius: 8px;">
-  <input type="hidden" name="_redirect" value="https://www.vayucleantechnologies.com/thank-you.html" />
   <input type="hidden" name="_autoresponse" value="Thank you for contacting Vayuclean Technologies. We have received your message and will respond as soon as possible." />
   <div style="margin-bottom: 15px;">
     <label for="name" style="display: block; margin-bottom: 5px;">Name</label>
